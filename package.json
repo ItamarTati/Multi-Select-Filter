@@ -1,0 +1,35 @@
+{
+  "name": "techtest2",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "1.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.0.9",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-select": "^3.1.0",
+    "reactstrap": "^5.0.0-beta.2"
+  },
+  "scripts": {
+    "start": "npm-run-all -p start-react start-server",
+    "start-react": "react-scripts start",
+    "start-server": "node server",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:8000"
+    }
+  }
+}
